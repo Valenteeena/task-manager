@@ -24,9 +24,7 @@ function EditTask(props) {
             setValues({
                 ...props.tasks[props.currentId]
             })
-       
-     // eslint-disable-next-line react-hooks/exhaustive-deps        
-    }, [props.currentId, props.tasks, initialValues])
+    }, [props.currentId, props.tasks])
 
     const handleInputChange = e  => {
         var {name, value} = e.target;
