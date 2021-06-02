@@ -50,7 +50,7 @@ function AddTask(props) {
 
                 {/* Task Title Field */}
                 <div>
-                    <p><label for="title"> <span>*</span> Task Title: </label></p>
+                    <p><label> <span>*</span> Task Title: </label></p>
                     <input type="text" 
                         required 
                         placeholder="Task title" 

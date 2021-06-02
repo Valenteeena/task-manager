@@ -14,13 +14,32 @@ export default class tasks extends Component {
         currentId:''
     };
 
-    showEdit = (e, id ) => {
-        this.setCurrentId(id);
+    showEdit = e => {
         this.setState({
             show: !this.state.show
         });
     };
-
+    setCurrentId = (id, e) =>{
+        this.showEdit();
+        this.setState({
+            currentId: id
+        });
+        
+    }
+    editTask = obj => {
+        db.child(`tasks/${this.state.currentId}`).set(
+            obj,
+            err=>{
+                if(err)
+                    console.log(err);
+                else
+                    this.setState({
+                        currentId:''
+                    });
+            }
+        )
+        console.log(obj);
+    }
     onDelete = id =>{
         if(window.confirm("Are you sure you want to delete this task?")){
             db.child(`tasks/${id}`).remove(
@@ -107,7 +126,7 @@ export default class tasks extends Component {
                                                     <FontAwesomeIcon icon={["far", "trash-alt"]} color="red" className="actionIcon" onClick={() => { this.onDelete(id) }}/>
                                                 </li>
                                                 <li>
-                                                    <FontAwesomeIcon icon="edit" color="skyblue" className="actionIcon" onClick={e => {this.showEdit(id);}}/>
+                                                    <FontAwesomeIcon icon="edit" color="skyblue" className="actionIcon" onClick={e => { this.setCurrentId(id)}}/>
                                                 </li>
                                             </ul>
                                         </div>
@@ -119,7 +138,14 @@ export default class tasks extends Component {
                         })
                     }
                 </table>
-                <EditTask closeForm={this.showEdit} show={this.state.show}/>
+                <EditTask 
+                    closeForm={this.showEdit} 
+                    show={this.state.show} 
+                    editTask ={this.editTask} 
+                    currentId={this.state.currentId} 
+                    tasks={this.state.tasks} 
+                />
+
             </section>
         )
     }
