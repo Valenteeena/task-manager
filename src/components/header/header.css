@@ -1,0 +1,136 @@
+header{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+header > div:first-of-type {
+    display: flex;
+}
+header > div:first-of-type > img{
+    width:2.5rem;
+    height: 2.5rem;
+    margin-right: .25rem;
+}
+header > div:first-of-type > h3{
+    color: #6f7070;
+    font-size: 1.6rem;
+    padding-top: .5rem;
+}
+header > div > button{
+    background-color: rgba(35, 81, 197, 0.5);
+    border: none;
+    color: #093ebe;
+    padding:.7rem 2.3rem;
+    border-radius: 20rem;
+    border-top-left-radius: 0;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: .87rem;
+    transition: all .5s;
+}
+header > div > button:hover{
+    color: white;
+}
+
+.regForm{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.438);
+}
+.regForm > form{
+    width: 40%;
+    margin:auto;
+    margin-top: 3.5rem;
+    border-radius: .25rem;
+    padding: 2rem;
+    background-color: white;
+}
+.regForm > form > section{
+    float: right;
+    margin-right: 1rem;
+}
+.regForm > form > section > button{
+    border: none;
+    background-color: white;
+}
+.regForm > form > h3{
+    margin-top: 2rem;
+    clear: both;
+    color: #093ebe;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-bottom: .25rem;
+    text-align: center;
+}
+.regForm > form > p{
+    text-align: center;
+    color: #093fbe93;
+    font-size: .9rem;
+    margin-bottom: 1rem;
+}
+.regForm > form > div{
+    display: flex;
+    margin:0.25rem;
+    padding-top: .5rem;
+}
+.regForm > form > div > p > label >span,
+.delDate > h4 > span{
+    color: #ff4500;
+    padding-right: .5rem;
+    font-size: .7rem;
+}
+
+.regForm > form > div > p,
+.delDate > h4{
+    font-size: .9rem;
+    font-weight: bold;
+    width: 9rem;
+    padding: .5rem;
+    text-align: right;
+}
+.delDate > h4{
+    margin-bottom: .5rem;
+    padding: 0;
+
+}
+.delDate{
+    display:block!important;
+
+}
+.delDate > div {
+    margin:auto;
+    text-align: center;
+}
+.delDate > div > label{
+    font-size: .9rem;
+    font-weight: bold;
+    padding-right: .5rem;
+    margin-left: 2rem;
+}
+.delDate input{
+    width: 5rem !important;
+    padding:.5rem;
+}
+
+.regForm > form > div > input,
+.regForm > form > div > select{
+    width: 20rem;
+    padding:.5rem;
+    font-size: .9rem;
+}
+.regForm > form > div > button{
+    width: 60%;
+    padding: .5rem ;
+    margin: auto;
+    background: #093ebe;
+    color: white;
+    border-radius: .25rem;
+    font-weight: bold;
+    border: none;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
